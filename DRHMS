@@ -1,0 +1,35 @@
+protected void Page_Load(object sender, EventArgs e)
+        {
+
+            string CRroomtype = Request.QueryString["CRroomtype"];
+            string CRcheckin = Request.QueryString["CRcheckin"];
+            string CRcheckout = Request.QueryString["CRcheckout"];
+            string CRadult = Request.QueryString["CRadult"];
+            string CRchild = Request.QueryString["CRchild"];
+            string CRremarks = Request.QueryString["CRremarks"];
+            string CRlaterequest = Request.QueryString["CRlaterequest"];
+
+
+            lblCNRroom.Text = CRroomtype;
+            lblCNRci.Text = CRcheckin;
+            lblCNRco.Text = CRcheckout;
+            lblCNRadults.Text = CRadult;
+            lblCNRchild.Text = CRchild;
+            lblCNRremarks.Text = CRremarks;
+            lblCNRrequest.Text = CRlaterequest;
+
+        }
+
+        protected void CNRnextBTN_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("Payment.aspx?");
+        }
+
+        protected void CRNbackBTN_Click(object sender, EventArgs e)
+        {
+           // Server.Transfer("OnlineBooking.aspx?");
+        }
+
+
+    }
+}
